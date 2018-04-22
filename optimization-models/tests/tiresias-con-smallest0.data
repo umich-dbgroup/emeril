@@ -1,0 +1,20 @@
+set tuple_ids := 0 1;
+set bin_ids := 0 1;
+set pred_ids := 0 1;
+set bin_tuple_ids[0] := 0;
+set bin_tuple_ids[1] := 1;
+param tuple_preds: 0 1 :=
+  0 1 1
+  1 1 0
+;
+param num_bins := 2;
+param num_preds := 2;
+param target_counts :=
+  0  1
+  1  0;
+param target_bounds: lower upper :=
+  0  1 1
+  1  0 0
+;
+
+end;

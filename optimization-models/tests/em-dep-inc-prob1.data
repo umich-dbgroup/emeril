@@ -1,0 +1,32 @@
+data;
+set bin_ids := 1 2 3 4;
+set pred_ids := 1 2 3;
+set constraint_ids := ;
+
+param num_bins := 4;
+param total_rows := 8;
+param bin_probs :=
+  1 0.25
+  2 0.25
+  3 0.25
+  4 0.25
+;
+param bin_pred_probs: 1 2 3 4 :=
+  1 1.0 0.5 0.5 1.0
+  2 0.0 1.0 0.5 0.0
+  3 0.0 0.5 1.0 0.0
+;
+param target_counts :=
+  1 0
+  2 2
+  3 1
+  4 0
+;
+param target_bounds: lower upper :=
+  1 0.0 0.1
+  2 1.9 2.1
+  3 0.9 1.1
+  4 0.0 0.1
+;
+param first_combo_pid := 4;
+end;

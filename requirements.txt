@@ -1,0 +1,20 @@
+## Main stuff ##
+jupyter
+numpy
+pandas==0.19.2
+scipy
+pyemd
+requests
+psycopg2
+sqlalchemy
+
+## Plotting ##
+plotly
+seaborn
+
+## Web server stuff ##
+cherrypy
+
+## removed stuff ##
+#matplotlib
+#statsmodels
