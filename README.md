@@ -1,6 +1,6 @@
 # Emeril #
 
-This project contains source code for the publication, *Constraint-based Explanation and Repair of Filtered-based Transformations*, a paper to be presented at VLDB'18. **Caveat:** I haven't had a chance to test this version of the code (cleaned up to make it easier for others to run), so if you have any issues, ping me and I'll try to help.
+This project contains source code for the publication, *Constraint-based Explanation and Repair of Filtered-based Transformations*, a paper to be presented at VLDB'18. **Caveat:** I haven't had a chance to test this version of the code (i.e., after cleaning up to make it easier for others to run), so use at your own risk.
 
 
 
@@ -12,6 +12,13 @@ This project contains source code for the publication, *Constraint-based Explana
   2. Modify `get_real_world_data` and `add_real_world_syn_answer_v1` in src/emeril/realworld.py to define/load your data in a similar manner as the other datasets.
   3. Run following (or look at `test_real_world_v1` in src/emeril/realworld.py):
     ```bash
+    # if using ampl, set path to where ampl binary located
+    $ export EMERIL_AMPL_DIR="path/to/ampl/binary/directory"
+
+    # if using glpk (i.e., for baseline test), set path to where glpk binary located
+    $ export EMERIL_GLPK_DIR="path/to/glpk/binary/directory"
+
+    # use python to get results
     $ cd src/python
     $ python
     > meta = test_real_world_v1(
@@ -56,13 +63,6 @@ This project contains source code for the publication, *Constraint-based Explana
 
 2. Get synthetic pred results
 ```bash
-# if using ampl, set path to where ampl binary located
-$ export EMERIL_AMPL_DIR="path/to/ampl/binary/directory"
-
-# if using glpk (i.e., for baseline test), set path to where glpk binary located
-$ export EMERIL_GLPK_DIR="path/to/glpk/binary/directory"
-
-# synthetic runs
 ~/emeril/src/python/experiments/syndata_runs_v2.py --mode="preds" \
   --pred_dep_percents="0.1" \
   --preds="1000" \
